@@ -1,14 +1,20 @@
 import menu from "./modules/menu/menu.js";
+import schedule from "./modules/schedule/schedule.js";
 
 fetchData(
     "https://infoskaerm.techcollege.dk/umbraco/api/content/getcanteenmenu/?type=json",
     "menu"
 );
 
+fetchData(
+    "https://iws.itcn.dk/techcollege/schedules?departmentcode=smed",
+    "schedule"
+);
+
 function fetchData(url, type) {
     fetch(url)
         .then((result) => {
-            console.log(result);
+            //console.log(result);
             return result.json();
         })
 
@@ -24,6 +30,7 @@ function fetchData(url, type) {
                     menu(data);
                     break;
                 case "schedule":
+                    schedule(data.value);
                     break;
                 default:
                     console.log("Ingen typer defineret");
