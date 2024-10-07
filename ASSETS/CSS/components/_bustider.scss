@@ -19,28 +19,27 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--color-yellow);
+        padding: 2vw;
+        border-radius: 5px;
+        font-size: 4vw;
+        width: 40vw;
+    }
+    h2{
+        color: var(--color-white);
+        font-size: 2vw;
+    }
+    h2 span{
+        color: var(--color-yellow);
+    }
 }
 
-#busHeader h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--color-yellow);
-    padding: 2vw;
-    border-radius: 5px;
-    font-size: 4vw;
-    width: 40vw;
-}
 
-#busHeader h2{
-    color: var(--color-white);
-    font-size: 2vw;
-}
-
-#busHeader h2 span{
-    color: var(--color-yellow);
-}
 
 #bustidContainer{
     display: flex;
