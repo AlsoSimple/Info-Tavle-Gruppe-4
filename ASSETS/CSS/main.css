@@ -14,6 +14,11 @@
   border: 2px solid var(--color-yellow);
   border-radius: 15px;
 }
+#bustider legend {
+  text-align: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
 
 #busContainer {
   margin: 2vw;
@@ -36,10 +41,14 @@
   border-radius: 5px;
   font-size: 4vw;
   width: 40vw;
+  font-weight: 900;
 }
 #busHeader h2 {
   color: var(--color-white);
   font-size: 2vw;
+  font-weight: 800;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
 }
 #busHeader h2 span {
   color: var(--color-yellow);
@@ -49,7 +58,6 @@
   display: flex;
   flex-direction: column;
 }
-
 #bustidContainer hgroup {
   display: flex;
   justify-content: space-between;
@@ -62,15 +70,24 @@
   font-weight: 100;
 }
 
+.bustid {
+  background-color: var(--color-white);
+  margin-top: 1vw;
+}
 .bustid div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-weight: 600;
+  margin-left: 1vw;
 }
-
-.bustid {
-  background-color: var(--color-white);
-  margin-top: 1vw;
+.bustid div :nth-child(2) {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--color-yellow);
+  width: 20%;
+  font-weight: 600;
 }
 
 #klokke {
@@ -81,22 +98,27 @@
   border: 2px solid var(--color-yellow);
   border-radius: 15px;
   color: var(--color-white);
+  padding: 4vw;
 }
-
+#klokke legend {
+  text-align: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
 #klokke div h1 {
   color: var(--color-white);
   font-size: 8vw;
 }
-
 #klokke div h3 {
   color: var(--color-yellow);
+  font-weight: 200;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Gothic A1", sans-serif;
 }
 
 body {

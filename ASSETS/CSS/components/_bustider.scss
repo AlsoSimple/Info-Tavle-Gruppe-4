@@ -7,6 +7,11 @@
     flex-direction: column;
     border: 2px solid var(--color-yellow);
     border-radius: 15px;
+    legend{
+        text-align: center;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
 }
 
 #busContainer{
@@ -29,10 +34,14 @@
         border-radius: 5px;
         font-size: 4vw;
         width: 40vw;
+        font-weight: 900;
     }
     h2{
         color: var(--color-white);
         font-size: 2vw;
+        font-weight: 800;
+        margin-top: 1vw;
+        margin-bottom: 2vw;
     }
     h2 span{
         color: var(--color-yellow);
@@ -44,29 +53,37 @@
 #bustidContainer{
     display: flex;
     flex-direction: column;
+    hgroup{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        color: var(--color-white);
+        font-size: 1.5vw;
+        h3{
+            font-weight: 100;
+        }   
+    }
 }
 
-#bustidContainer hgroup{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    color: var(--color-white);
-    font-size: 1.5vw;
-    h3{
-        font-weight: 100;
-    }   
-}
 
 
-.bustid div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.bustid{
-    
+.bustid{    
     background-color: var(--color-white);
     margin-top: 1vw;
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-weight: 600;
+        margin-left: 1vw;
+    }
+    div :nth-child(2){
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        background-color: var(--color-yellow);
+        width: 20%;
+        font-weight: 600;
+    }
 }

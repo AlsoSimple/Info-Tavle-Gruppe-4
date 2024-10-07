@@ -8,14 +8,18 @@
     border: 2px solid var(--color-yellow);
     border-radius: 15px;
     color: var(--color-white);
+    padding: 4vw;
+    legend{
+        text-align: center;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+    div h1{
+        color: var(--color-white);
+        font-size: 8vw;
+    }
+    div h3{
+        color: var(--color-yellow);
+        font-weight: 200;
+    }
 }
-
-#klokke div h1{
-    color: var(--color-white);
-    font-size: 8vw;
-}
-
-#klokke div h3{
-    color: var(--color-yellow);
-}
-
