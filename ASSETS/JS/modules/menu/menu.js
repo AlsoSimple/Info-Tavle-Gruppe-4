@@ -11,11 +11,14 @@ export default function menu(data) {
     `;
 
     data.Days.forEach((day) => {
+        let dayShortName =
+            day.DayName === "torsdag" ? "tors" : day.DayName.slice(0, 3);
+
         html += `
             <div>
               <hgroup>
-                <h3>${day.DayName}</h3>
-                <h3>${day.Dish}</h3>
+                <h3>${dayShortName}</h3>
+                <h3>${day.Dish.slice(0, -12)}</h3>
               </hgroup>
             </div>
         `;
