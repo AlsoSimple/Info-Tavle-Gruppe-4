@@ -1,21 +1,63 @@
 //CLOCK
 
-#klokke{
+// #klokke{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     border: 2px solid var(--color-yellow);
+//     border-radius: 15px;
+//     color: var(--color-white);
+// }
+
+// #klokke div h1{
+//     color: var(--color-white);
+//     font-size: 8vw;
+// }
+
+// #klokke div h3{
+//     color: var(--color-yellow);
+// }
+
+#App {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    border: 2px solid var(--color-yellow);
-    border-radius: 15px;
-    color: var(--color-white);
-}
-
-#klokke div h1{
-    color: var(--color-white);
-    font-size: 8vw;
-}
-
-#klokke div h3{
-    color: var(--color-yellow);
-}
-
+    height: 100vh;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+  }
+  
+  .watch-face {
+    border: 2px solid #ff0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      border: 2px solid #ff0;
+      border-radius: 50%;
+      background-color: #000;
+    }
+  }
+  
+  .time {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .date {
+    font-size: 1rem;
+    color: #ff0;
+    margin-top: 10px;
+  }
+  
