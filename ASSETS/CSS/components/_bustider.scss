@@ -1,0 +1,24 @@
+/* BUSTIDER */
+
+#bustider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid var(--color-yellow);
+    border-radius: 15px;
+}
+
+#busContainer{
+    margin: 2vw;
+}
+
+#busHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    background-color: var(--color-yellow);
+    padding: 2vw;
+    border-radius: 5px;
+}
