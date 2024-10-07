@@ -1,0 +1,21 @@
+//CLOCK
+
+#klokke{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid var(--color-yellow);
+    border-radius: 15px;
+    color: var(--color-white);
+}
+
+#klokke div h1{
+    color: var(--color-white);
+    font-size: 8vw;
+}
+
+#klokke div h3{
+    color: var(--color-yellow);
+}
+
