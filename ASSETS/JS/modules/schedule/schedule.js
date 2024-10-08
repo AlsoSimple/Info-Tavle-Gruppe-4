@@ -1,6 +1,4 @@
 export default function schedule(schedules) {
-    let currentTime = new Date("2024-10-07T09:00:00+02:00");
-
     let currentTime = new Date();
 
     const filteredSchedules = schedules.filter(
@@ -24,7 +22,6 @@ export default function schedule(schedules) {
         })
         .sort((a, b) => new Date(a.StartDate) - new Date(b.StartDate));
 
-    console.log(upcomingSchedules);
     makeSchedule(upcomingSchedules);
 }
 
@@ -56,7 +53,17 @@ function makeSchedule(schedule) {
     for (let i = 0; i < 11; i++) {
         let startDate = new Date(schedule[i].StartDate);
 
-        const startTime = startDate.getHours() + ":" + startDate.getMinutes();
+        let startDateHours = startDate.getHours();
+        if (startDateHours < 10) {
+            startDateHours = "0" + startDateHours;
+        }
+
+        let startDateMinutes = startDate.getMinutes();
+        if (startDateMinutes < 10) {
+            startDateMinutes = "0" + startDateMinutes;
+        }
+
+        const startTime = startDateHours + ":" + startDateMinutes;
 
         html += `
             <div>
