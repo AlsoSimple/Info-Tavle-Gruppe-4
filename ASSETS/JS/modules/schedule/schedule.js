@@ -1,7 +1,5 @@
 export default function schedule(schedules) {
-    let currentTime = new Date("2024-10-07T09:00:00+02:00");
-
-    console.log(currentTime);
+    let currentTime = new Date();
 
     const filteredSchedules = schedules.filter(
         (schedule) =>
@@ -14,32 +12,17 @@ export default function schedule(schedules) {
             schedule.Team === "h0mg010124f"
     );
 
-    let upcomingSchedules = filteredSchedules.filter(
-        (schedule) => currentTime < new Date(schedule.StartDate)
-    );
+    const upcomingSchedules = filteredSchedules
+        .filter((schedule) => {
+            let startDate = new Date(schedule.StartDate);
+            return (
+                currentTime < startDate &&
+                getDayOfWeek(startDate) === getDayOfWeek(currentTime)
+            );
+        })
+        .sort((a, b) => new Date(a.StartDate) - new Date(b.StartDate));
 
-    upcomingSchedules = upcomingSchedules.sort(
-        (a, b) => new Date(a.StartDate) - new Date(b.StartDate)
-    );
-
-    upcomingSchedules.forEach((schedule) => {
-        let startDate = new Date(schedule.StartDate);
-
-        console.log(
-            "starttime: " +
-                getDayOfWeek(startDate) +
-                " " +
-                startDate.getHours() +
-                ":" +
-                startDate.getMinutes(),
-            "currenttime: " +
-                getDayOfWeek(currentTime) +
-                " " +
-                currentTime.getHours() +
-                ":" +
-                currentTime.getMinutes()
-        );
-    });
+    makeSchedule(upcomingSchedules);
 }
 
 function getDayOfWeek(date) {
@@ -53,4 +36,47 @@ function getDayOfWeek(date) {
         "Saturday",
     ];
     return daysOfWeek[date.getDay()];
+}
+
+function makeSchedule(schedule) {
+    const scheduleElement = document.getElementById("skema");
+    let html = `
+        <h1>HER FINDER DU OS</h1>
+        <hgroup>
+          <h3>Lokale</h3>
+          <h3>Holdnavn</h3>
+          <h3>Fag</h3>
+          <h3>Uddannelse</h3>
+          <h3>Tid</h3>
+        </hgroup>
+    `;
+    for (let i = 0; i < 11; i++) {
+        let startDate = new Date(schedule[i].StartDate);
+
+        let startDateHours = startDate.getHours();
+        if (startDateHours < 10) {
+            startDateHours = "0" + startDateHours;
+        }
+
+        let startDateMinutes = startDate.getMinutes();
+        if (startDateMinutes < 10) {
+            startDateMinutes = "0" + startDateMinutes;
+        }
+
+        const startTime = startDateHours + ":" + startDateMinutes;
+
+        html += `
+            <div>
+                <hgroup>
+                  <h3>${schedule[i].Room}</h3>
+                  <h3>${schedule[i].Team}</h3>
+                  <h3>${schedule[i].Subject}</h3>
+                  <h3>${schedule[i].Education}</h3>
+                  <h3>${startTime}</h3>
+                </hgroup>
+            </div>
+        `;
+    }
+
+    scheduleElement.innerHTML += html;
 }
