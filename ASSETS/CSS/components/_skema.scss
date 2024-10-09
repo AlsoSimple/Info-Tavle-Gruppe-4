@@ -1,18 +1,14 @@
-$color-green: #005543;
-$color-diarrhea-yellow: #e8e305;
-$color-yellow: #fdf251;
-$color-white: #ffffff;
-$color-black: #000000;
+@use "./colors" as colors;
 
 #skema {
     grid-column: 3 / 5;
     grid-row: 1 / 4;
-    border: 3px solid $color-yellow;
+    border: 3px solid colors.$color-yellow;
     border-radius: 5px;
 
     legend {
         text-align: center;
-        color: $color-yellow;
+        color: colors.$color-yellow;
         padding: 0 1rem;
         font-size: 1.5rem;
     }
@@ -21,13 +17,13 @@ $color-black: #000000;
         display: flex;
         flex-direction: column;
         margin: 20px 20px;
-        background-color: $color-green;
+        background-color: colors.$color-green;
         border-radius: 5px;
         padding: 20px;
 
         h1 {
             font-size: 3.2rem;
-            color: $color-white;
+            color: colors.$color-white;
             text-align: center;
         }
 
@@ -43,13 +39,13 @@ $color-black: #000000;
                 }
                 tr {
                     border: none;
-                    background-color: $color-white;
+                    background-color: colors.$color-white;
                     overflow: hidden;
                     border-radius: 5px;
 
                     th {
                         border: none;
-                        color: $color-white;
+                        color: colors.$color-white;
                         font-size: 1.2rem;
                         font-weight: 300;
                         text-align: start;
@@ -57,7 +53,7 @@ $color-black: #000000;
 
                     td {
                         border: none;
-                        color: $color-black;
+                        color: colors.$color-black;
                         font-size: 1.2rem;
                         font-weight: 600;
                         &:first-child {
