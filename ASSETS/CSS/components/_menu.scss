@@ -1,13 +1,9 @@
-$color-green: #005543;
-$color-diarrhea-yellow: #e8e305;
-$color-yellow: #fdf251;
-$color-white: #ffffff;
-$color-black: #000000;
+@use "./colors" as colors;
 
 #menu {
     grid-column: 2 / 3;
     grid-row: 1 / 4;
-    border: 3px solid $color-yellow;
+    border: 3px solid colors.$color-yellow;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -17,14 +13,14 @@ $color-black: #000000;
 
     legend {
         text-align: center;
-        color: $color-yellow;
+        color: colors.$color-yellow;
         padding: 0 1rem;
         font-size: 1.5rem;
     }
 
     hgroup {
         h1 {
-            color: $color-white;
+            color: colors.$color-white;
             font-size: 3.2rem;
             text-align: center;
             line-height: 0.9;
@@ -32,7 +28,7 @@ $color-black: #000000;
         }
 
         h2 {
-            color: $color-yellow;
+            color: colors.$color-yellow;
             font-size: 2rem;
             text-align: center;
             line-height: 0.9;
@@ -49,7 +45,7 @@ $color-black: #000000;
             width: 100%;
             display: flex;
             justify-content: space-between;
-            background-color: $color-white;
+            background-color: colors.$color-white;
             gap: 10px;
             padding: 5px;
             border-radius: 2px;
