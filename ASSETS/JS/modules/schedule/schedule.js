@@ -41,20 +41,21 @@ function getDayOfWeek(date) {
 function makeSchedule(schedule) {
     const scheduleElement = document.querySelector("#skema-container table");
     let html = ``;
-    for (let i = 0; i < 11; i++) {
+
+    const maxItems = Math.min(schedule.length, 15);
+
+    for (let i = 0; i < maxItems; i++) {
+        console.log(schedule[i].StartDate);
+
         let startDate = new Date(schedule[i].StartDate);
 
-        let startDateHours = startDate.getHours();
-        if (startDateHours < 10) {
-            startDateHours = "0" + startDateHours;
-        }
+        let startDateHours = startDate.getHours().toString().padStart(2, "0");
+        let startDateMinutes = startDate
+            .getMinutes()
+            .toString()
+            .padStart(2, "0");
 
-        let startDateMinutes = startDate.getMinutes();
-        if (startDateMinutes < 10) {
-            startDateMinutes = "0" + startDateMinutes;
-        }
-
-        const startTime = startDateHours + ":" + startDateMinutes;
+        const startTime = `${startDateHours}:${startDateMinutes}`;
 
         html += `
             <tr>

@@ -21,7 +21,7 @@
     hgroup {
         h1 {
             color: colors.$color-white;
-            font-size: 3.2rem;
+            font-size: 6rem;
             text-align: center;
             line-height: 0.9;
             font-weight: 800;
@@ -29,7 +29,7 @@
 
         h2 {
             color: colors.$color-yellow;
-            font-size: 2rem;
+            font-size: 3rem;
             text-align: center;
             line-height: 0.9;
             font-weight: 700;
@@ -45,6 +45,7 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             background-color: colors.$color-white;
             gap: 10px;
             padding: 5px;
@@ -52,12 +53,14 @@
 
             h3 {
                 text-transform: capitalize;
+                font-size: 2rem;
 
                 &:last-child {
                     text-align: end;
-                    //text-overflow: ellipsis;
-                    //width: fit-content;
-                    //white-space: nowrap;
+                    text-overflow: ellipsis;
+                    max-width: 250px;
+                    overflow: hidden;
+                    white-space: nowrap;
                 }
             }
         }
