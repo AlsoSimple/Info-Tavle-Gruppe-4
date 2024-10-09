@@ -98,6 +98,7 @@
 }
 #skema #skema-container h1 {
   font-size: 3.2rem;
+  text-transform: uppercase;
   color: #ffffff;
   text-align: center;
 }
@@ -126,6 +127,7 @@
   color: #000000;
   font-size: 1.2rem;
   font-weight: 600;
+  padding: 5px;
 }
 #skema #skema-container table tbody tr td:first-child {
   border-radius: 2px 0 0 2px;
