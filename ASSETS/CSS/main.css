@@ -11,33 +11,17 @@
   font-size: 1.5rem;
 }
 
-fieldset {
-  border: 2px solid var(--color-yellow);
-  border-radius: 15px;
-  color: #fff;
-  padding: 10px;
-  margin: 10px;
-  width: 360px;
+#klokke {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  border: 3px solid #fdf251;
+  border-radius: 5px;
 }
-fieldset legend {
+#klokke legend {
   text-align: center;
-}
-fieldset #clock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 15px;
-  color: #fff;
-}
-fieldset h1 {
-  color: var(--color-white);
-  font-size: 8vw;
-}
-fieldset h3 {
-  color: var(--color-yellow);
-  font-size: 0.5rem;
-  font-weight: 300;
+  color: #fdf251;
+  padding: 0 1rem;
+  font-size: 1.5rem;
 }
 
 #menu {
@@ -104,6 +88,19 @@ fieldset h3 {
   padding: 0 1rem;
   font-size: 1.5rem;
 }
+
+fieldset {
+  border: 2px solid var(--color-yellow);
+  border-radius: 15px;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  width: 360px;
+}
+fieldset legend {
+  text-align: center;
+}
+fieldset #clock {
 #skema #skema-container {
   display: flex;
   flex-direction: column;
