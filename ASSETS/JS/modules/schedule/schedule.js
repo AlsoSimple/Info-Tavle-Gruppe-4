@@ -39,7 +39,7 @@ function getDayOfWeek(date) {
 }
 
 function makeSchedule(schedule) {
-    const scheduleElement = document.querySelector("#skema-container table");
+    const scheduleElement = document.getElementById("skema-items");
     let html = ``;
 
     const maxItems = Math.min(schedule.length, 15);
@@ -68,5 +68,5 @@ function makeSchedule(schedule) {
         `;
     }
 
-    scheduleElement.innerHTML += html;
+    scheduleElement.innerHTML = html;
 }
