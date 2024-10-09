@@ -1,21 +1,30 @@
 //CLOCK
+fieldset{
+    border: 2px solid var(--color-yellow);
+    border-radius: 15px;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    width: 360px;
+    legend{
+text-align: center;    }
 
-#klokke{
+#clock{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px solid var(--color-yellow);
     border-radius: 15px;
-    color: var(--color-white);
+    color: #fff;
+    
 }
-
-#klokke div h1{
+h1{
     color: var(--color-white);
     font-size: 8vw;
 }
-
-#klokke div h3{
+h3{
     color: var(--color-yellow);
+    font-size: 0.5rem;
+    font-weight: 300;
 }
-
+}
