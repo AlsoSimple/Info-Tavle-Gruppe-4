@@ -1,19 +1,15 @@
-$color-green: #005543;
-$color-diarrhea-yellow: #e8e305;
-$color-yellow: #fdf251;
-$color-white: #ffffff;
-$color-black: #000000;
+@use "./colors" as colors;
 
 //Bustider
 #bustider {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    border: 3px solid $color-yellow;
+    border: 3px solid colors.$color-yellow;
     border-radius: 5px;
 
     legend {
         text-align: center;
-        color: $color-yellow;
+        color: colors.$color-yellow;
         padding: 0 1rem;
         font-size: 1.5rem;
     }
