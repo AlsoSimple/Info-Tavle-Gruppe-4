@@ -1,8 +1,5 @@
 import menu from "./modules/menu/menu.js";
 import schedule from "./modules/schedule/schedule.js";
-import {updateClock} from "./modules/clock/clock.js";    updateClock();
-
-
 
 fetchData(
     "https://infoskaerm.techcollege.dk/umbraco/api/content/getcanteenmenu/?type=json",
