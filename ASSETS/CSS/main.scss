@@ -1,18 +1,28 @@
-@use './components/colors' as colors;
-@use './components/bustider' as bustider;
-@use './components/clock' as clock;
+@use "./components/bustider" as bustider;
+@use "./components/clock" as clock;
+@use "./components/menu" as menu;
+@use "./components/skema" as skema;
 
-*{
+$color-green: #005543;
+$color-diarrhea-yellow: #e8e305;
+$color-yellow: #fdf251;
+$color-white: #ffffff;
+$color-black: #000000;
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
-    background-color: var(--color-black);
+    background-color: $color-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #backgroundContainer {
@@ -21,14 +31,14 @@ body{
     left: 0;
     width: 100%;
     height: 100vh;
-    background: url('../IMAGES/train.png') no-repeat center center;
+    background: url("../IMAGES/train.png") no-repeat center center;
     background-size: cover;
     opacity: 0.33;
-    z-index: -1; 
+    z-index: -1;
 }
 
-
-
-
-
-
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 360px);
+    gap: 40px;
+}

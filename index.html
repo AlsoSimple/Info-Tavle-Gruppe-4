@@ -1,16 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Infoboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Infoboard</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
 
+        <link rel="stylesheet" href="ASSETS/CSS/main.css" />
+        <script src="ASSETS/JS/site.js" type="module"></script>
+    </head>
+    <body>
+        <main>
+            <div id="backgroundContainer"></div>
+            <!-- BUSTIDER -->
+            <fieldset id="bustider">
+                <legend>BUS</legend>
+                <div id="busContainer">
+                    <hgroup id="busHeader">
+                        <h1>17 MOD STRUBJERG</h1>
+                        <h2>DE NÆSTE <span>4 AFGANGE</span></h2>
+                    </hgroup>
+                    <div id="bustidContainer">
+                        <hgroup>
+                            <h3>Stoppested</h3>
+                            <h3>Ankomst</h3>
+                        </hgroup>
+                        <div class="bustid">
+                            <div>
+                                <div>Øster Sundby Vej</div>
+                                <div>15:13</div>
+                            </div>
+                        </div>
+                        <div class="bustid">
+                            <div>
+                                <div>Øster Uttrup Vej</div>
+                                <div>15:26</div>
+                            </div>
+                        </div>
+                        <div class="bustid">
+                            <div>
+                                <div>Øster Sundby Vej</div>
+                                <div>15:33</div>
+                            </div>
+                        </div>
+                        <div class="bustid">
+                            <div>
+                                <div>Øster Uttrup Vej</div>
+                                <div>15:56</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- KLOKKE -->
+            <fieldset id="klokke">
+                <legend>KLOKKE</legend>
+                <div>
+                    <h1>12:34</h1>
+                </div>
+                <div>
+                    <h3>FREDAG 28. SEP 2024</h3>
+                </div>
+            </fieldset>
+            <!-- MENU -->
+            <fieldset id="menu">
+                <legend>Menu</legend>
+                <hgroup>
+                    <h1>DAGENS FROKOST</h1>
+                    <h2></h2>
+                </hgroup>
+                <div id="menu-container"></div>
+            </fieldset>
+            <!-- SKEMA -->
+            <fieldset id="skema">
+                <legend>Skema</legend>
+                <div id="skema-container">
+                    <h1>Her finder du os</h1>
+                    <table>
+                        <tr>
+                            <th>Lokale</th>
+                            <th>Holdnavn</th>
+                            <th>Fag</th>
+                            <th>Uddannelse</th>
+                            <th>Tid</th>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
+        </main>
+    </body>
     <link rel="stylesheet" href="ASSETS/CSS/main.css" />
     <script src="ASSETS/JS/site.js" type="module"></script>
   </head>
