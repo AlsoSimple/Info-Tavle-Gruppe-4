@@ -39,17 +39,8 @@ function getDayOfWeek(date) {
 }
 
 function makeSchedule(schedule) {
-    const scheduleElement = document.getElementById("skema");
-    let html = `
-        <h1>HER FINDER DU OS</h1>
-        <hgroup>
-          <h3>Lokale</h3>
-          <h3>Holdnavn</h3>
-          <h3>Fag</h3>
-          <h3>Uddannelse</h3>
-          <h3>Tid</h3>
-        </hgroup>
-    `;
+    const scheduleElement = document.querySelector("#skema-container table");
+    let html = ``;
     for (let i = 0; i < 11; i++) {
         let startDate = new Date(schedule[i].StartDate);
 
@@ -66,15 +57,13 @@ function makeSchedule(schedule) {
         const startTime = startDateHours + ":" + startDateMinutes;
 
         html += `
-            <div>
-                <hgroup>
-                  <h3>${schedule[i].Room}</h3>
-                  <h3>${schedule[i].Team}</h3>
-                  <h3>${schedule[i].Subject}</h3>
-                  <h3>${schedule[i].Education}</h3>
-                  <h3>${startTime}</h3>
-                </hgroup>
-            </div>
+            <tr>
+              <td>${schedule[i].Room}</td>
+              <td>${schedule[i].Team}</td>
+              <td>${schedule[i].Subject}</td>
+              <td>${schedule[i].Education}</td>
+              <td>${startTime}</td>
+            </tr>
         `;
     }
 
