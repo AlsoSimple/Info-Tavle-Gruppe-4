@@ -27,7 +27,7 @@ export const displayData = (data) => {
                     card.innerHTML = `
                     <p class="stop">${dep.stop}</p>
                     <p class="name">${dep.name}</p>
-                    <p class="time">Ankomst: Kl: ${dep.time}</p>
+                    <p class="time">${dep.time}</p>
                 `;
                     container.appendChild(card);
                 }
