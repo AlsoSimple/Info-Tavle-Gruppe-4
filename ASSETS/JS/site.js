@@ -22,17 +22,24 @@ fetchData(
 
 setInterval(() => {
     fetchData(
+        "https://infoskaerm.techcollege.dk/umbraco/api/content/getcanteenmenu/?type=json",
+        "menu"
+    );
+}, 3600 * 1000); // 1 time
+
+setInterval(() => {
+    fetchData(
         "https://iws.itcn.dk/techcollege/schedules?departmentcode=smed",
         "schedule"
     );
-}, 30000);
+}, 30 * 1000); // 30 sekunder
 
 setInterval(() => {
     fetchData(
         "https://xmlopen.rejseplanen.dk/bin/rest.exe/multiDepartureBoard?id1=851400602&id2=851973402&rttime&format=json&useBus=1",
         "bus"
     );
-}, 30000);
+}, 30 * 1000); // 30 sekunder
 
 function fetchData(url, type) {
     fetch(url)
