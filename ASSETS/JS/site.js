@@ -4,6 +4,7 @@ import { updateClock } from "./modules/clock/clock.js";
 import { displayData } from "./modules/bustider/bustider.js";
 
 updateClock();
+
 fetchData(
     "https://infoskaerm.techcollege.dk/umbraco/api/content/getcanteenmenu/?type=json",
     "menu"
@@ -14,17 +15,24 @@ fetchData(
     "schedule"
 );
 
+fetchData(
+    "https://xmlopen.rejseplanen.dk/bin/rest.exe/multiDepartureBoard?id1=851400602&id2=851973402&rttime&format=json&useBus=1",
+    "bus"
+);
+
 setInterval(() => {
     fetchData(
         "https://iws.itcn.dk/techcollege/schedules?departmentcode=smed",
         "schedule"
     );
-}, 20000);
+}, 30000);
 
-fetchData(
-    "https://xmlopen.rejseplanen.dk/bin/rest.exe/multiDepartureBoard?id1=851400602&id2=851973402&rttime&format=json&useBus=1",
-    "bus"
-);
+setInterval(() => {
+    fetchData(
+        "https://xmlopen.rejseplanen.dk/bin/rest.exe/multiDepartureBoard?id1=851400602&id2=851973402&rttime&format=json&useBus=1",
+        "bus"
+    );
+}, 30000);
 
 function fetchData(url, type) {
     fetch(url)

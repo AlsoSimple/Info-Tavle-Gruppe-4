@@ -16,7 +16,7 @@ export const displayData = (data) => {
             });
 
             // Clear html (den skal rettes til projektet)
-            container.innerHTML += "";
+            container.innerHTML = "";
 
             // Create and append elements for each departure
             departures.forEach((dep, index) => {
@@ -29,7 +29,6 @@ export const displayData = (data) => {
                     <p class="name">${dep.name}</p>
                     <p class="time">Ankomst: Kl: ${dep.time}</p>
                 `;
-
                     container.appendChild(card);
                 }
             });

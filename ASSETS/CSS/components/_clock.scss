@@ -6,6 +6,9 @@
     grid-row: 3 / 4;
     border: 3px solid colors.$color-yellow;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     legend {
         text-align: center;
@@ -13,18 +16,22 @@
         padding: 0 1rem;
         font-size: 1.5rem;
     }
-    h2{
-        color: #fff;
-        text-align: center;
-        padding-top: 0.5rem;
-        font-size: 3rem;
-    }
-    h3{
-        color: #fff;
-        text-align: center;
-        padding-bottom: 1.5rem;
-        font-weight: 300;
-        color: colors.$color-yellow;
 
+    #clock {
+        flex: 1;
+        h2 {
+            color: #fff;
+            text-align: center;
+            font-size: 8.5rem;
+            line-height: 0.9;
+        }
+        h3 {
+            color: #fff;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 300;
+            color: colors.$color-yellow;
+            text-transform: uppercase;
+        }
     }
 }
