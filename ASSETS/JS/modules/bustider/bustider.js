@@ -20,12 +20,15 @@ export const displayData = (data) => {
 
             // Create and append elements for each departure
             departures.forEach((dep, index) => {
-                if (index < 3) {
+                if (index < 5) {
                     const card = document.createElement("div");
                     card.className = "bustid";
 
+                    // Get only the first part of dep.stop
+                    const stop = dep.stop.split(" ")[0];
+
                     card.innerHTML = `
-                    <p class="stop">${dep.stop}</p>
+                    <p class="stop">${stop}</p>
                     <p class="name">${dep.name}</p>
                     <p class="time">${dep.time}</p>
                 `;

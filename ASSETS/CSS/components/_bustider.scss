@@ -77,6 +77,8 @@
 
                     &:last-child {
                         background-color: colors.$color-yellow;
+                        max-width: 70px;
+                        width: 100%;
                     }
                 }
             }
