@@ -20,46 +20,21 @@
             <!-- BUSTIDER -->
             <fieldset id="bustider">
                 <legend>BUS</legend>
-                <div id="busContainer">
-                    <hgroup id="busHeader">
-                        <h1>17 MOD STRUBJERG</h1>
-                        <h2>DE NÆSTE <span>4 AFGANGE</span></h2>
+                <hgroup id="busHeader">
+                    <h1>17 MOD STRUBJERG</h1>
+                    <h2>DE NÆSTE 4 <span>AFGANGE</span></h2>
+                </hgroup>
+                <div id="bustidContainer">
+                    <hgroup>
+                        <h3>Stoppested</h3>
+                        <h3>Ankomst</h3>
                     </hgroup>
-                    <div id="bustidContainer">
-                        <hgroup>
-                            <h3>Stoppested</h3>
-                            <h3>Ankomst</h3>
-                        </hgroup>
-                        <div class="bustid">
-                            <div>
-                                <div>Øster Sundby Vej</div>
-                                <div>15:13</div>
-                            </div>
-                        </div>
-                        <div class="bustid">
-                            <div>
-                                <div>Øster Uttrup Vej</div>
-                                <div>15:26</div>
-                            </div>
-                        </div>
-                        <div class="bustid">
-                            <div>
-                                <div>Øster Sundby Vej</div>
-                                <div>15:33</div>
-                            </div>
-                        </div>
-                        <div class="bustid">
-                            <div>
-                                <div>Øster Uttrup Vej</div>
-                                <div>15:56</div>
-                            </div>
-                        </div>
-                    </div>
+                    <div id="bustiderne"></div>
                 </div>
             </fieldset>
             <!-- KLOKKE -->
-            <fieldset id="clockFieldset" >
-                <legend><img src="ASSETS/IMAGES/Watch01.svg" alt=""></legend>
+            <fieldset id="clockFieldset">
+                <legend><img src="ASSETS/IMAGES/Watch01.svg" alt="" /></legend>
                 <div id="clock"></div>
             </fieldset>
             <!-- MENU -->
@@ -77,13 +52,16 @@
                 <div id="skema-container">
                     <h1>Her finder du os</h1>
                     <table>
-                        <tr>
-                            <th>Lokale</th>
-                            <th>Holdnavn</th>
-                            <th>Fag</th>
-                            <th>Uddannelse</th>
-                            <th>Tid</th>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th>Lokale</th>
+                                <th>Holdnavn</th>
+                                <th>Fag</th>
+                                <th>Uddannelse</th>
+                                <th>Tid</th>
+                            </tr>
+                        </tbody>
+                        <tbody id="skema-timer"></tbody>
                     </table>
                 </div>
             </fieldset>
