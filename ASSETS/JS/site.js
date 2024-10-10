@@ -1,6 +1,7 @@
 import menu from "./modules/menu/menu.js";
 import schedule from "./modules/schedule/schedule.js";
 import { updateClock } from "./modules/clock/clock.js";
+import { displayData } from "./modules/bustider/bustider.js";
 
 updateClock();
 
@@ -16,6 +17,25 @@ setInterval(() => {
     );
 }, 10000);
 
+fetchData(
+    "https://xmlopen.rejseplanen.dk/bin/rest.exe/multiDepartureBoard?id1=851400602&id2=851973402&rttime&format=json&useBus=1",
+    "bus"
+);
+
+setInterval(() => {
+    fetchData(
+        "https://iws.itcn.dk/techcollege/schedules?departmentcode=smed",
+        "schedule"
+    );
+}, 30000);
+
+setInterval(() => {
+    fetchData(
+        "https://xmlopen.rejseplanen.dk/bin/rest.exe/multiDepartureBoard?id1=851400602&id2=851973402&rttime&format=json&useBus=1",
+        "bus"
+    );
+}, 30000);
+
 function fetchData(url, type) {
     fetch(url)
         .then((result) => {
@@ -28,6 +48,9 @@ function fetchData(url, type) {
 
             switch (type) {
                 case "bus":
+                    console.log(data);
+
+                    displayData(data);
                     break;
                 case "menu":
                     menu(data);
